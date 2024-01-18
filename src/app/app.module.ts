@@ -8,11 +8,17 @@ import { HomeComponent } from './home-page/home.component';
 import { HeroComponent } from './hero-home/hero.component';
 import { PartnerComponent } from './partner/partner.component';
 import { BenefitsComponent } from './benefits/benefits.component';
-import { ProductsComponent } from './products/products.component';
+import { HomeProductsComponent } from './home-products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { HeroAboutComponent } from './hero-about/hero-about.component';
 import { MissionVisionComponent } from './mission-vision/mission-vision.component';
+import { ProductsPageComponent } from './products-page/products-page.component';
+import { HeroProductsComponent } from './hero-products/hero-products.component';
+import { DownloadablesComponent } from './downloadables/downloadables.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +29,16 @@ import { MissionVisionComponent } from './mission-vision/mission-vision.componen
     HeroAboutComponent,
     PartnerComponent,
     BenefitsComponent,
-    ProductsComponent,
+    HomeProductsComponent,
     FooterComponent,
     AboutPageComponent,
-    MissionVisionComponent
+    MissionVisionComponent,
+    ProductsPageComponent,
+    HeroProductsComponent,
+    DownloadablesComponent,
+    ProductsListComponent,
+    ContactPageComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
