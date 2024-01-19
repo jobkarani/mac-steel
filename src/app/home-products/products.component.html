@@ -1,12 +1,12 @@
-<div class="flex px-[55px] py-[100px]">
-    <div class="w-[20%] text-[#8c7dff] font-[700] text-[14px] leading-[14px]">PRODUCTS</div>
-    <div class="w-[80%] flex-col">
-        <div class="pb-[3%] text-[100px] text-[#eeeee7] leading-[110px] font-[900] text-[#eeeee7]">Check Out Our Products</div>
-        <div class="grid grid-cols-2 gap-4">
+<div class="xl:flex md:block sm:block xl:px-[55px] md:px-[55px] px-[20px] xl:py-[100px] md:py-[60px] py-[60px]">
+    <div class="xl:w-[20%] md:w-[100%] sm:w-[100%] text-[#8c7dff] font-[700] text-[14px] leading-[14px]">PRODUCTS</div>
+    <div class="xl:w-[80%] md:w-[100%] sm:w-[100%] flex-col">
+        <div class="pb-[3%] xl:text-[80px] md:text-[40px] text-[45px] xl:leading-[110px] md:leading-[110px] leading-[40px] xl:my-0 md:my-0 my-[40px] font-[900] text-[#eeeee7]">Check Out Our Products</div>
+        <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
             <div class="max-w-sm bg-white border border-[#0e2326] rounded-lg shadow dark:bg-[#0e2326] dark:border-[#0e2326]" *ngFor="let prod of product; let i = index">
-                <img class="rounded-t-lg w-full" src="{{prod.image}}" alt="" />
+                <img class="rounded-t-lg w-full h-[40vh]" src="{{prod.image}}" alt="" />
                 <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{prod.name | uppercase}}</h5>
+                    <h5 class="mb-2 xl:text-2xl md:text-l sm:text-md font-bold tracking-tight text-gray-900 dark:text-white">{{prod.name | uppercase}}</h5>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{prod.description}}</p>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Ksh {{prod.price}} per Kg</p>
                     <button (click)="openWhatsApp(i)"  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#00f78c] rounded-[25px] hover:bg-[#00f78c] focus:ring-4 focus:outline-none focus:ring-[#00f78c] dark:bg-[#00f78c] dark:hover:bg-[#00f78c] dark:focus:ring-[#00f78c]">
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <a href="/products"  class="inline-flex my-[5%] items-center px-[5%] py-[1%] text-[21px] font-[700] text-center text-white bg-[#00f78c] rounded-[25px] hover:bg-[#00f78c] focus:ring-4 focus:outline-none focus:ring-[#00f78c] dark:bg-[#00f78c] dark:hover:bg-[#00f78c] dark:focus:ring-[#00f78c]">
+        <a href="/products"  class="inline-flex my-[5%] items-center px-[5%] py-[1%] xl:text-[21px] md:text-[19px] text-[16px] font-[700] text-center text-white bg-[#00f78c] rounded-[25px] hover:bg-[#00f78c] focus:ring-4 focus:outline-none focus:ring-[#00f78c] dark:bg-[#00f78c] dark:hover:bg-[#00f78c] dark:focus:ring-[#00f78c]">
             See More Products
             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
