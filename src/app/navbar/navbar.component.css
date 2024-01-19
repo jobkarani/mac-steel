@@ -1,0 +1,11 @@
+.navbar {
+    @apply shadow-md text-white;
+  }
+  
+  .mobile-menu {
+    @apply hidden;
+  }
+  
+  .show-mobile-menu {
+    @apply block;
+  }
