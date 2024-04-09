@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<ng-container *ngIf="isloading$ |async">
+
+    <app-loader></app-loader>
+
+</ng-container>
+
+<ng-container *ngIf="isloading$.value===false">
+
+    <router-outlet></router-outlet>
+
+</ng-container>

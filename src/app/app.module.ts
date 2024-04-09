@@ -20,6 +20,7 @@ import { DownloadablesComponent } from './downloadables/downloadables.component'
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     DownloadablesComponent,
     ProductsListComponent,
     ContactPageComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
