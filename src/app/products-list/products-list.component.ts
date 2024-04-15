@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ProductResponse } from '../interfaces/product';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-products-list',
@@ -13,7 +14,7 @@ export class ProductsListComponent {
   phonenumber: number = 254740030111;
   id:number = 0;
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient, private meta: Meta) {}
   ngOnInit(){
 
       this.http.get<ProductResponse[]>("https://mac-stl-api-production.up.railway.app/api_products/").subscribe(
@@ -23,6 +24,10 @@ export class ProductsListComponent {
       }
     );
 
+    this.meta.addTags([ 
+      { name: 'description', content: 'Mac Steel' }, 
+      { name: 'keywords', content: 'Chuma,steel, Scrap, Waste disposal, Copper, Dawa, Brass, Light Iron, Stainless steel, Scrap metal dealers in Nairobi, Nairobi Scrap, Selling scrap' } 
+    ]);
   }
 
   // whatsapp 

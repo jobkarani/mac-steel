@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HomeProductsService } from '../services/home-products.service';
 import { ProductResponse } from '../interfaces/product';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-products',
@@ -8,7 +9,7 @@ import { ProductResponse } from '../interfaces/product';
   styleUrls: ['./products.component.css']
 })
 export class HomeProductsComponent {
-  constructor(private homeproductsService: HomeProductsService) { }
+  constructor(private homeproductsService: HomeProductsService, private meta: Meta) { }
 
   product: ProductResponse[] = [];
   phonenumber: number = 254740030111;
@@ -17,6 +18,11 @@ export class HomeProductsComponent {
     this.homeproductsService.getProductsToHome().subscribe(data => {
       this.product = data;
     });
+
+    this.meta.addTags([ 
+      { name: 'description', content: 'Mac Steel' }, 
+      { name: 'keywords', content: 'Chuma,steel, Scrap, Waste disposal, Copper, Dawa, Brass, Light Iron, Stainless steel, Scrap metal dealers in Nairobi, Nairobi Scrap, Selling scrap' } 
+    ]);
   }
 
   // whatsapp 
